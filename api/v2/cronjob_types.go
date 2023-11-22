@@ -109,6 +109,9 @@ type CronJobSpec struct {
 	// This is a pointer to distinguish between explicit zero and not specified.
 	// +optional
 	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty"`
+
+	// SchedulerName indicates the scheduler used to schedule job pod
+	SchedulerName string `json:"schedulerName,omitempty"`
 }
 
 // CronJobStatus defines the observed state of CronJob
